@@ -1,0 +1,12 @@
+[build]
+command = "pnpm build"
+publish = "out"
+
+[build.environment]
+NODE_VERSION = "22"
+
+[[headers]]
+for = "/_next/static/*"
+
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
