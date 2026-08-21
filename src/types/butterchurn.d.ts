@@ -35,3 +35,24 @@ declare module "butterchurn-presets" {
   const presets: ButterchurnPresetsModule;
   export default presets;
 }
+
+declare module "butterchurn-presets/lib/butterchurnPresetsExtra.min" {
+  import type { ButterchurnPresetsModule } from "butterchurn-presets";
+
+  const presets: ButterchurnPresetsModule;
+  export default presets;
+}
+
+declare module "butterchurn-presets/lib/butterchurnPresetsExtra2.min" {
+  import type { ButterchurnPresetsModule } from "butterchurn-presets";
+
+  const presets: ButterchurnPresetsModule;
+  export default presets;
+}
+
+declare module "butterchurn-presets/lib/butterchurnPresetsMD1.min" {
+  import type { ButterchurnPresetsModule } from "butterchurn-presets";
+
+  const presets: ButterchurnPresetsModule;
+  export default presets;
+}

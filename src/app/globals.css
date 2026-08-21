@@ -8,6 +8,7 @@
   --accent: #ff5c22;
   --accent-bright: #ff7545;
   --green: #9dffbd;
+  --warning: #ffc078;
   --shadow: 0 20px 80px rgba(0, 0, 0, 0.44);
 }
 
@@ -30,7 +31,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -41,7 +43,8 @@ a {
 
 button:focus-visible,
 a:focus-visible,
-input:focus-visible {
+input:focus-visible,
+select:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
@@ -277,6 +280,38 @@ button:disabled {
   animation: source-pulse 2.4s ease-out infinite;
 }
 
+.source-dot.is-warning {
+  background: var(--warning);
+  box-shadow: 0 0 12px rgba(255, 192, 120, 0.55);
+}
+
+.source-level {
+  width: 46px;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.source-level span,
+.input-level-meter span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 90ms linear;
+}
+
+.signal-warning {
+  color: var(--warning);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
 @keyframes source-pulse {
   0%, 30% { box-shadow: 0 0 0 0 rgba(157, 255, 189, 0.3); }
   70%, 100% { box-shadow: 0 0 0 7px rgba(157, 255, 189, 0); }
@@ -287,7 +322,9 @@ button:disabled {
   top: 50%;
   left: 50%;
   width: min(580px, calc(100vw - 40px));
+  max-height: calc(100dvh - 150px);
   padding: 30px;
+  overflow-y: auto;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: rgba(12, 12, 14, 0.73);
@@ -397,6 +434,94 @@ button:disabled {
 .source-card small {
   color: var(--faint);
   font-size: 11px;
+}
+
+.source-settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px 16px;
+  margin-top: 17px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.setting-control {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.setting-control-wide {
+  grid-column: 1 / -1;
+}
+
+.setting-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.setting-label output,
+.setting-label small {
+  color: var(--faint);
+  font-size: 8px;
+  letter-spacing: 0.04em;
+}
+
+.setting-label small.is-warning {
+  color: var(--warning);
+}
+
+.setting-control select {
+  width: 100%;
+  height: 38px;
+  padding: 0 34px 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.055);
+  color-scheme: dark;
+  font-size: 11px;
+}
+
+.setting-control input[type="range"] {
+  width: 100%;
+  height: 4px;
+  margin: 14px 0;
+  appearance: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+}
+
+.setting-control input[type="range"]::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+  appearance: none;
+  border: 2px solid #111113;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.setting-control input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #111113;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.input-level-meter {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .onboarding-hint {
@@ -960,6 +1085,14 @@ kbd {
 
   .source-card small {
     font-size: 9px;
+  }
+
+  .source-settings {
+    grid-template-columns: 1fr;
+  }
+
+  .setting-control-wide {
+    grid-column: auto;
   }
 
   .onboarding-hint {

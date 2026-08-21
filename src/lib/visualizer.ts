@@ -51,3 +51,52 @@ export function wrapIndex(index: number, length: number): number {
   if (length <= 0) return 0;
   return ((index % length) + length) % length;
 }
+
+export function getRmsLevel(samples: Uint8Array): number {
+  if (samples.length === 0) return 0;
+
+  let sumOfSquares = 0;
+  for (const sample of samples) {
+    const normalized = (sample - 128) / 128;
+    sumOfSquares += normalized * normalized;
+  }
+
+  return Math.sqrt(sumOfSquares / samples.length);
+}
+
+export function getFrequencyBandLevel(
+  samples: Uint8Array,
+  sampleRate: number,
+  fftSize: number,
+  lowFrequency: number,
+  highFrequency: number,
+): number {
+  if (
+    samples.length === 0 ||
+    !Number.isFinite(sampleRate) ||
+    !Number.isFinite(fftSize) ||
+    sampleRate <= 0 ||
+    fftSize <= 0
+  ) {
+    return 0;
+  }
+
+  const binWidth = sampleRate / fftSize;
+  const firstBin = Math.max(0, Math.floor(lowFrequency / binWidth));
+  const lastBin = Math.min(
+    samples.length - 1,
+    Math.ceil(highFrequency / binWidth),
+  );
+  if (lastBin < firstBin) return 0;
+
+  let total = 0;
+  for (let index = firstBin; index <= lastBin; index += 1) {
+    total += samples[index];
+  }
+
+  return total / (lastBin - firstBin + 1) / 255;
+}
+
+export function isBassTransient(level: number, baseline: number): boolean {
+  return level >= 0.12 && level >= baseline * 1.45 && level - baseline >= 0.05;
+}

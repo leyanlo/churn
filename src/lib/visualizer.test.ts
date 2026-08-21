@@ -3,8 +3,11 @@ import {
   displayPresetName,
   filterPresetNames,
   formatTime,
+  getFrequencyBandLevel,
   getRandomIndex,
   getRendererDimensions,
+  getRmsLevel,
+  isBassTransient,
   wrapIndex,
 } from "./visualizer";
 
@@ -50,5 +53,18 @@ describe("visualizer helpers", () => {
     expect(getRandomIndex(3, 1, 0)).toBe(0);
     expect(getRandomIndex(3, 1, 0.99)).toBe(2);
     expect(getRandomIndex(1, 0, 0.5)).toBe(0);
+  });
+
+  it("measures audio levels and bass transients", () => {
+    expect(getRmsLevel(new Uint8Array([128, 128, 128]))).toBe(0);
+    expect(getRmsLevel(new Uint8Array([0, 255]))).toBeGreaterThan(0.99);
+
+    const frequencies = new Uint8Array(8);
+    frequencies[1] = 255;
+    expect(getFrequencyBandLevel(frequencies, 800, 8, 100, 100)).toBe(1);
+
+    expect(isBassTransient(0.3, 0.15)).toBe(true);
+    expect(isBassTransient(0.16, 0.15)).toBe(false);
+    expect(isBassTransient(0.08, 0.02)).toBe(false);
   });
 });

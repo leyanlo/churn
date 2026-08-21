@@ -4,12 +4,12 @@ A browser-native MilkDrop visualizer built with Next.js, Butterchurn, the Web Au
 
 ## Features
 
-- 100 classic MilkDrop presets with blended transitions
-- Microphone input
+- 100 classic MilkDrop presets at startup, expanding to 395 when the preset browser opens
+- Microphone input with device selection, sensitivity, a live level meter, and a no-signal warning
 - Shared tab or screen audio when supported by the browser
 - Local audio file playback and drag-and-drop
 - An inaudible generated demo beat for trying the visualizer without permissions
-- Preset search, previous/next/random controls, and automatic preset changes
+- Preset search, previous/next/random controls, timed changes, and optional beat-synced changes
 - Fullscreen, responsive controls, keyboard shortcuts, and installable web app metadata
 - All audio analysis stays on the device
 
@@ -30,8 +30,11 @@ Open <http://localhost:3000>.
 pnpm typecheck
 pnpm lint
 pnpm test
+pnpm test:presets
 pnpm build
 ```
+
+The preset smoke test renders every bundled preset in headless Chromium. Install its browser once with `pnpm exec playwright install chromium`.
 
 ## Browser support
 
