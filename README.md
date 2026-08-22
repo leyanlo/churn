@@ -32,7 +32,7 @@ See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for the full Butterchurn 
 
 ## Development
 
-Requires Node.js 22 and pnpm 11.
+Requires Node.js 24 and pnpm 11.
 
 ```sh
 pnpm install --frozen-lockfile
