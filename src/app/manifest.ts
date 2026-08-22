@@ -4,9 +4,9 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "MilkDrop Web",
-    short_name: "MilkDrop",
-    description: "Music, visualized in your browser.",
+    name: "Churn",
+    short_name: "Churn",
+    description: "An unofficial browser visualizer powered by Butterchurn.",
     start_url: "/",
     display: "standalone",
     background_color: "#050506",

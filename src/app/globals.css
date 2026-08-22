@@ -981,11 +981,17 @@ kbd {
   font-family: var(--font-mono), monospace;
 }
 
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+}
+
 .about-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 20px;
   color: var(--ink);
   font-size: 11px;
   text-decoration: none;

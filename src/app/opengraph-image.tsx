@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
-export const alt = "MilkDrop Web — Music, visualized";
+export const alt = "Churn — an unofficial browser visualizer powered by Butterchurn";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -62,7 +62,7 @@ export default function OpenGraphImage() {
             }}
           />
           <div style={{ fontSize: 23, fontWeight: 700, letterSpacing: "0.17em" }}>
-            MILKDROP
+            CHURN
           </div>
           <div
             style={{
@@ -73,7 +73,7 @@ export default function OpenGraphImage() {
               letterSpacing: "0.12em",
             }}
           >
-            WEB
+            PLAYER
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -81,7 +81,7 @@ export default function OpenGraphImage() {
             Music, visualized.
           </div>
           <div style={{ marginTop: 18, fontSize: 26, color: "rgba(247,245,239,.65)" }}>
-            A browser-native MilkDrop experience.
+            Powered by Butterchurn and classic MilkDrop presets.
           </div>
         </div>
       </div>

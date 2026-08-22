@@ -364,7 +364,7 @@ export function VisualizerApp() {
       try {
         if (!document.createElement("canvas").getContext("webgl2")) {
           throw new Error(
-            "MilkDrop Web needs WebGL 2. Try the latest Chrome, Safari, Firefox, or Edge.",
+            "Churn needs WebGL 2. Try the latest Chrome, Safari, Firefox, or Edge.",
           );
         }
 
@@ -897,8 +897,8 @@ export function VisualizerApp() {
           aria-label="Choose an audio source"
         >
           <span className="wordmark-drop" aria-hidden="true" />
-          <span>MILKDROP</span>
-          <span className="wordmark-edition">WEB</span>
+          <span>CHURN</span>
+          <span className="wordmark-edition">PLAYER</span>
         </button>
 
         <div className="topbar-actions">
@@ -949,7 +949,7 @@ export function VisualizerApp() {
           >
             <CloseIcon />
           </button>
-          <p className="eyebrow">BROWSER-NATIVE VISUALS</p>
+          <p className="eyebrow">BUTTERCHURN-POWERED VISUALS</p>
           <h2 id="onboarding-title">Music, visualized.</h2>
           <p className="onboarding-copy">
             Choose a source. Your audio stays in this browser and is never uploaded.
@@ -1259,7 +1259,7 @@ export function VisualizerApp() {
           >
             <div className="modal-header">
               <div>
-                <p className="eyebrow">MILKDROP WEB</p>
+                <p className="eyebrow">CHURN</p>
                 <h2 id="help-title">Lose track of time.</h2>
               </div>
               <button
@@ -1272,10 +1272,10 @@ export function VisualizerApp() {
               </button>
             </div>
             <p className="help-copy">
-              This browser edition uses Web Audio and WebGL 2. Audio is analyzed on
-              your device; it is never recorded or uploaded. Open the source chooser
-              to adjust sensitivity, microphone input, and timed or beat-synced preset
-              changes.
+              Churn is an unofficial browser interface powered by Butterchurn, Web
+              Audio, and WebGL 2. Audio is analyzed on your device; it is never
+              recorded or uploaded. Open the source chooser to adjust sensitivity,
+              microphone input, and timed or beat-synced preset changes.
             </p>
             <dl className="shortcut-list">
               <div><dt><kbd>Space</kbd> / <kbd>→</kbd></dt><dd>Next preset</dd></div>
@@ -1286,21 +1286,27 @@ export function VisualizerApp() {
               <div><dt><kbd>?</kbd></dt><dd>Open this guide</dd></div>
             </dl>
             <div className="compatibility-note">
-              <strong>Preset compatibility</strong>
+              <strong>What Churn is—and is not</strong>
               <p>
-                This release renders classic MilkDrop presets. MilkDrop3-only
-                double presets (<code>.milk2</code>) and desktop editing tools are
-                not yet available on the web.
+                Butterchurn provides the renderer, and the preset artists created the
+                bundled visuals. Churn adds the interface, browser integrations, and
+                validation. It is not an official MilkDrop project or a port of
+                MilkDrop3.
               </p>
             </div>
-            <a
-              className="about-link"
-              href="https://github.com/leyanlo/MilkDrop3"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View source on GitHub <ArrowRightIcon />
-            </a>
+            <div className="about-links">
+              <a className="about-link" href="/credits">
+                Credits and licenses <ArrowRightIcon />
+              </a>
+              <a
+                className="about-link"
+                href="https://github.com/leyanlo/churn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View source on GitHub <ArrowRightIcon />
+              </a>
+            </div>
           </section>
         </div>
       )}

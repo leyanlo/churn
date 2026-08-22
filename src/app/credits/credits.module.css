@@ -1,0 +1,132 @@
+.page {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(255, 92, 34, 0.14), transparent 32rem),
+    #08080a;
+}
+
+.shell {
+  width: min(820px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.back,
+.section a {
+  color: var(--ink);
+  text-underline-offset: 4px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 54px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.back:hover,
+.section a:hover {
+  color: var(--accent-bright);
+}
+
+.header {
+  max-width: 690px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--accent-bright);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(42px, 9vw, 76px);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.header > p:last-child,
+.section p,
+.section li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.header > p:last-child {
+  margin: 24px 0 0;
+  font-size: 18px;
+}
+
+.section {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section h2 {
+  margin: 0 0 17px;
+  font-size: 23px;
+  letter-spacing: -0.025em;
+}
+
+.section p {
+  margin: 0 0 14px;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.section ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.section pre {
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: rgba(247, 245, 239, 0.72);
+  background: rgba(255, 255, 255, 0.035);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+  .shell {
+    width: min(100% - 28px, 820px);
+    padding-top: 28px;
+  }
+
+  .back {
+    margin-bottom: 38px;
+  }
+
+  .header > p:last-child,
+  .section p,
+  .section li {
+    font-size: 14px;
+  }
+
+  .section pre {
+    padding: 16px;
+    font-size: 9px;
+  }
+}

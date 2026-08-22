@@ -18,22 +18,22 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://milkdrop.leyanlo.com"),
-  title: "MilkDrop Web — Music, visualized",
+  title: "Churn — Music, visualized",
   description:
-    "A browser-native MilkDrop visualizer. Play a file, use your microphone, or share tab audio and watch music turn into motion.",
-  applicationName: "MilkDrop Web",
+    "An unofficial browser visualizer powered by Butterchurn and classic MilkDrop presets.",
+  applicationName: "Churn",
   authors: [{ name: "Leyan Lo", url: "https://leyanlo.com" }],
   openGraph: {
-    title: "MilkDrop Web",
-    description: "Music, visualized in your browser.",
+    title: "Churn",
+    description: "An unofficial visualizer powered by Butterchurn.",
     url: "https://milkdrop.leyanlo.com",
-    siteName: "MilkDrop Web",
+    siteName: "Churn",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MilkDrop Web",
-    description: "Music, visualized in your browser.",
+    title: "Churn",
+    description: "An unofficial visualizer powered by Butterchurn.",
   },
 };
 
