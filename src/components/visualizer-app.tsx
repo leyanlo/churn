@@ -896,7 +896,7 @@ export function VisualizerApp() {
           onClick={() => setShowOnboarding(true)}
           aria-label="Choose an audio source"
         >
-          <span className="wordmark-drop" aria-hidden="true" />
+          <span className="wordmark-mark" aria-hidden="true" />
           <span>CHURN</span>
           <span className="wordmark-edition">PLAYER</span>
         </button>

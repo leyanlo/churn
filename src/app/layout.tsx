@@ -17,7 +17,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://milkdrop.leyanlo.com"),
+  metadataBase: new URL("https://churn.leyanlo.com"),
   title: "Churn — Music, visualized",
   description:
     "An unofficial browser visualizer powered by Butterchurn and classic MilkDrop presets.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Churn",
     description: "An unofficial visualizer powered by Butterchurn.",
-    url: "https://milkdrop.leyanlo.com",
+    url: "https://churn.leyanlo.com",
     siteName: "Churn",
     type: "website",
   },

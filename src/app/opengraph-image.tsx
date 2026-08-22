@@ -55,10 +55,11 @@ export default function OpenGraphImage() {
             style={{
               display: "flex",
               width: 28,
-              height: 36,
-              borderRadius: "70% 30% 70% 30%",
-              background: "#f7f5ef",
-              transform: "rotate(45deg)",
+              height: 28,
+              border: "6px solid #f7f5ef",
+              borderRightColor: "#ff4d00",
+              borderRadius: "50%",
+              transform: "rotate(-38deg)",
             }}
           />
           <div style={{ fontSize: 23, fontWeight: 700, letterSpacing: "0.17em" }}>

@@ -148,20 +148,24 @@ button:disabled {
   cursor: pointer;
 }
 
-.wordmark-drop {
+.wordmark-mark {
   position: relative;
-  width: 14px;
+  width: 18px;
   height: 18px;
   display: inline-block;
-  border-radius: 70% 30% 70% 30% / 70% 30% 70% 30%;
-  background: var(--ink);
-  transform: rotate(45deg);
+  border: 3px solid var(--ink);
+  border-right-color: var(--accent);
+  border-radius: 50%;
+  transform: rotate(-38deg);
 }
 
-.wordmark-drop::after {
+.wordmark-mark::after {
   content: "";
   position: absolute;
-  inset: 5px 3px 3px 5px;
+  width: 4px;
+  height: 4px;
+  top: 4px;
+  left: 4px;
   border-radius: 50%;
   background: var(--accent);
 }

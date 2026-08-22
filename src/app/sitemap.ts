@@ -5,12 +5,12 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://milkdrop.leyanlo.com",
+      url: "https://churn.leyanlo.com",
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://milkdrop.leyanlo.com/credits",
+      url: "https://churn.leyanlo.com/credits",
       changeFrequency: "yearly",
       priority: 0.4,
     },

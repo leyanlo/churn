@@ -28,7 +28,7 @@ Churn is not an official MilkDrop project and is not a port of MilkDrop3. It doe
 - [MilkDrop3](https://github.com/milkdrop2077/MilkDrop3), developed by milkdrop2077 and based on BeatDrop by Maxim Volskiy, inspired the experiment that led to Churn. Its implementation is not included in this app.
 - Churn's interface, browser integrations, validation, and deployment were developed by Leyan Lo with OpenAI Codex.
 
-See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for the complete license notices distributed with Churn.
+See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for the full Butterchurn and Butterchurn Presets license texts distributed with Churn.
 
 ## Development
 
@@ -59,4 +59,4 @@ Churn requires WebGL 2 and the Web Audio API. Sharing audio depends on browser a
 
 ## Deployment
 
-The application is configured as a static Next.js export for Netlify. Netlify uses `netlify.toml` to run `pnpm build` and publish `out` from the repository root.
+The application is configured as a static Next.js export for Netlify at [churn.leyanlo.com](https://churn.leyanlo.com). Netlify uses `netlify.toml` to run `pnpm build` and publish `out` from the repository root. The former `milkdrop.leyanlo.com` address redirects to the canonical Churn domain.
