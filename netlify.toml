@@ -12,6 +12,12 @@ status = 301
 force = true
 
 [[headers]]
+for = "/opengraph-image"
+
+  [headers.values]
+  Content-Type = "image/png"
+
+[[headers]]
 for = "/_next/static/*"
 
   [headers.values]
