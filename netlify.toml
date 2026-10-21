@@ -3,7 +3,7 @@ command = "pnpm build"
 publish = "out"
 
 [build.environment]
-NODE_VERSION = "24"
+NODE_VERSION = "24.22.1"
 
 [[redirects]]
 from = "https://milkdrop.leyanlo.com/*"
